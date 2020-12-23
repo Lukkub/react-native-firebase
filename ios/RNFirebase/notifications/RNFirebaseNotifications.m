@@ -117,7 +117,7 @@ RCT_EXPORT_METHOD(complete:(NSString*)handlerKey fetchResult:(UIBackgroundFetchR
               if (completionHandler != nil) {
                   completionHandlers[handlerKey] = nil;
                   @try {
-                      completionHandler(fetchResult);
+                      completionHandler();
                   }
                   @catch (NSException * e) {
                       NSLog(@"Exception completionHandler: %@", e);
